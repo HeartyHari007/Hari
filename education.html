@@ -1,0 +1,167 @@
+<style>* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;}
+  .container {
+    max-width: 90rem;
+    margin: 2rem auto;
+    padding: 0px 2rem;}
+  .img-fluid {
+    max-width: 100%;}
+  .logo img {
+    position: absolute;
+    left: 0px;
+    width: 170px;
+    height: 70px;}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;}
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 30px;}
+  .items a:link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;}
+  .items a:hover {
+    color: black;}
+  .active {
+    color: black !important;}
+  button {
+    font-size: 2rem;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, red,blue);
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    border: groove;}
+  button:hover {
+    background:white ;
+    outline: 2.5px solid black;
+    color:black;
+    border: none;}
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;}
+  .info {
+    display: flex;
+    flex-direction: column;}
+  .short-info {
+    color: orange#66FCF1;
+    font-size: 1rem;
+    margin-bottom: 0.9rem;}
+  .hero-heading {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;}
+  .hero-sub-heading {
+    font-size: 0.9rem;
+    opacity: 0.7;}
+  .users {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0px;}
+  .user {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #999;}
+  .learn-more {
+    align-self: start;
+    margin-top: 3rem;}
+body {
+    background-color: lightblue;
+    color: white;
+  margin: 0;
+}header {
+top: 1opx;
+background-image: url("paper.gif");
+padding: 20px;
+text-align: center;}
+.topnav {
+  align-items: center;
+  overflow: hidden;
+  background-color: black;}
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration:none;}
+.topnav a:hover {
+  background-color: white;
+  color: black}
+.con{display: grid;
+    grid-template-columns: 1fr,1fr;}
+.container {
+  max-width: 90rem;
+  margin: 2rem auto;
+  padding: 0px 2rem;}
+  @media only screen and (max-width: 967px) {
+    .row {
+      grid-template-columns: 1fr;}
+    .learn-more {
+      align-self: start;
+      bottom: 50px;
+      margin: 1rem 10px;}
+  </style>
+  <header>
+    <nav>
+      <div class="logo" style="position: absolute;top: 30px;">
+        <img style="size: auto;" src="img/qvesys-removebg-preview.png">
+      </div>
+        <div class="header">
+      <title>Qvesys Info-Tech</title>
+          <h1 style="position: absolute;left:390px;top:25px;font-size:60px;text-shadow: 2px 2px 5px blue;;color:white ;">Qvesys Info-Tech</Info-Tech></h1>
+      </div>
+      <div>
+          </div>
+      </div>
+      <div class="search">
+        <img src="/img/sea.png" style="width: 75px;height: 35px;position: absolute;top: 129px;right: 43px;color: white;">
+        <img src="/img/person.png" style="width: 48px;height: 38px;position: absolute;top: 128px;right: 2px;color: white;>
+      </div>   
+      <div class="other" style="position: absolute;">
+        <button>Log in</button>
+        <button>Sign up</button>
+        </div>
+        </style>
+      </div>
+    </nav>
+  </header>
+  <section>
+      <div class="row">
+        <div class="info">
+      <div class="topnav" style="position: absolute;top: 120px;left:35px;width: 89%;border:double;border:#c31432">
+        <a id="Home" href="#" > Home</a>
+        <a id="Service" href="#">Service</a>
+        <a id="About" href="#">About</a>
+        <a id="Contact" href="#">Contact</a>
+        <a id="Blog" href="#">Blog</a>
+    </div>
+    <div class="container">
+    <div class="mar" style="margin-top: 25px;padding: 20px;">
+          <p class="short-info" style="color: black;">#Get Your 14 Days Free Trial <br><br> "Education is the most powerful weapon which you can use to change the world."
+          <h2 class="hero-heading" style="color: black;">Cover All Technologies Under One Roof</h2>
+          <p class="hero-sub-heading" style="color: black;">"Education is the key to unlock the golden door of freedom." - George Washington Carver
+  </p>
+        
+          <button class="learn-more" style="position: absolute;bottom: 20px;">
+            Learn More</button>
+        </div>
+        </div>
+        <div>
+            <img src="/img/computer.png" style="background-color: transparent;width: 650px;height:350px;position: absolute;right:30px;bottom:20">
+            </div>
+      </div>
+    </div>
+</div>
+  </section>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Invoice </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container {
+            max-width: 1200px;
+        }
+        .form-check-input {
+            margin-top: 0.3rem;
+        }
+        .total-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: right;
+        }
+        .table thead th {
+            vertical-align: middle;
+        }
+        .table tbody td {
+            vertical-align: middle;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .mb-3 label {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">New Invoice</h1>
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="existingClient">
+                        <label class="form-check-label" for="existingClient">Existing Client</label>
+                    </div>
+                </div>
+                <div class="col-md-4" >
+                    <h5>Invoice Number</h5>
+                    <input type="text" class="form-control btn-outline-dark" id="invoiceNumber" placeholder="Invoice Number" >
+                </div>
+                <div class="col-md-4">
+                    <h5>Client ID</h5>
+                    <input type="text" class="form-control btn-outline-dark" id="clientId" placeholder="Client ID">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <h5>Client Name</h5>
+                    <input type="text" class="form-control btn-outline-dark" id="clientName" placeholder="Client Name">
+                </div>
+                <div class="col-md-4">
+                    <h5>Doctor Name</h5>
+                    <input type="text" class="form-control btn-outline-dark" id="doctorName" placeholder="Doctor Name">
+                </div>
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <input type="text" class="form-control btn-outline-dark" id="address" placeholder="Address">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <h5>Date</h5>
+                    <input type="date" class="form-control btn-outline-dark" id="date">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-1">
+                    <h6>HSN Code</h6>
+                    <input type="text" class="form-control btn-outline-dark" id="hsnCode" placeholder="HSN Code" value="3004">
+                </div>
+                <div class="col-md-2">
+                    <h6>Product Name</h6>
+                    <input type="text" class="form-control btn-outline-dark" id="productName" placeholder="Product/Service">
+                </div>
+                <div class="col-md-2">
+                    <h6>Company Name</h6>
+                    <input type="text" class="form-control btn-outline-dark" id="companyName" placeholder="Company Name">
+                </div>
+                <div class="col-md-1">
+                    <h6>Batch No</h6>
+                    <input type="text" class="form-control btn-outline-dark" id="batchNo" placeholder="Batch No">
+                </div>
+                <div class="col-md-1">
+                    <h6>QTY</h6>
+                    <input type="number" class="form-control btn-outline-dark" id="qty" placeholder="QTY">
+                </div>
+                <div class="col-md-1">
+                    <h6>Expiry</h6>
+                    <input type="text" class="form-control btn-outline-dark" id="expiry" placeholder="Expiry">
+                </div>
+                <div class="col-md-1">
+                    <h6>MRP</h6>
+                    <input type="number" class="form-control btn-outline-dark" id="mrp" placeholder="MRP" value="1">
+                </div>
+                <div class="col-md-1">
+                    <h6>gst Tax</h6>
+                    <select class="form-select outline-dark" id="gstTax">
+                        <option value="12%">12%</option>
+                        <option value="18%">18%</option>
+                        <option value="28%">28%</option>
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <h6>ShelfNo</h6>
+                    <input type="text" class="form-control btn-outline-dark" id="shelfNo" placeholder="Shelf No">
+                </div>
+                <div class="col-md-1"><br>
+                    <button type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Sl.</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">MRP</th>
+                        <th scope="col">QTY</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Action</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="totalDiscount">
+                        <label class="form-check-label btn-outline-dark" for="totalDiscount">Total Discount</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="number" class="form-control btn-outline-dark" id="discountAmount" placeholder="0">
+                </div>
+                <div class="col-md-6 text-end">
+                    <h4 class="total-amount">Total Amount: <span id="totalAmount">Rs.</span> 0.000</h4>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12 btn-group">
+                    <button type="button" class="btn btn-secondary">Previous Bill</button>
+                    <button type="button" class="btn btn-primary">Print and Save</button>
+                    <button type="button" class="btn btn-primary">Print Without Save</button>
+                    <button type="button" class="btn btn-primary">Save Without Print</button>
+                    <button type="button" class="btn btn-secondary">Next Bill</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
